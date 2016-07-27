@@ -10,16 +10,16 @@ if(bio.pic != "") {
   $("#header").append(formattedpic);
 }
 
-if(bio.ContactInfo.email != "")
+if(bio.contacts.email != "")
 {
-  var formattedemail = HTMLemail.replace("%data%",bio.ContactInfo.email);
+  var formattedemail = HTMLemail.replace("%data%",bio.contacts.email);
   $("#topContacts").prepend(formattedemail);
   $("#footerContacts").append(formattedemail);
 }
 
-if(bio.ContactInfo.mobile !="")
+if(bio.contacts.mobile !="")
 {
-  var formattedmobile = HTMLmobile.replace("%data%",bio.ContactInfo.mobile);
+  var formattedmobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
   $("#topContacts").prepend(formattedmobile);
   $("#footerContacts").append(formattedmobile);
 }

@@ -14,7 +14,7 @@ var Role = HTMLheaderRole.replace("%data%",role);
 var bio = {
   "Name" : name,
   "Role" : role,
-  "ContactInfo" : {
+  "contacts" : {
     "email" : "xyz@gmail.com",
     "mobile" : "123-456-7890"
   },
