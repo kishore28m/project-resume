@@ -88,11 +88,14 @@ var projects = {
 };
 
 var onlineclasses = {
+  "course" : [ {
     "title" : "Front-End Web Developer Nanodegree",
     "titleUrl" : "http://www.udacity.com/course/front-end-web-developer-nanodegree--nd001",
     "dates" : "2016",
     "school" : "Udacity",
     "url": "http://www.udacity.com"
+  }
+  ]
 }
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
