@@ -79,14 +79,14 @@ education.display = function() {
 education.display();
 
 if(onlineclasses.length != 0) {
-  $(".education-entry:last").append(HTMLonlineClasses);
-  var formattedTitle = HTMLonlineTitle.replace("%data%",onlineclasses.title).replace("#",onlineclasses.titleUrl);
-  var formattedschool = HTMLonlineSchool.replace("%data%",onlineclasses.school);
-  var formatteddates = HTMLonlineDates.replace("%data%",onlineclasses.dates);
-  var formattedurl = HTMLonlineURL.replace("%data%",onlineclasses.url).replace("#",onlineclasses.url);
-  var formattedonlinedata = formattedTitle + formattedschool + formatteddates + formattedurl;
-  $(".education-entry:last").append(formattedonlinedata);
-
+  for(i = 0; i < onlineclasses.length; i++) {
+    $(".education-entry:last").append(HTMLonlineClasses);
+    var formattedTitle = HTMLonlineTitle.replace("%data%",onlineclasses.title).replace("#",onlineclasses.titleUrl);
+    var formattedschool = HTMLonlineSchool.replace("%data%",onlineclasses.school);
+    var formatteddates = HTMLonlineDates.replace("%data%",onlineclasses.dates);
+    var formattedurl = HTMLonlineURL.replace("%data%",onlineclasses.url).replace("#",onlineclasses.url);
+    var formattedonlinedata = formattedTitle + formattedschool + formatteddates + formattedurl;
+    $(".education-entry:last").append(formattedonlinedata);
 }
 
 // Education - Ends here
