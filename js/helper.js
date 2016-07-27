@@ -55,7 +55,7 @@ var work = {
     "location" : "New York, NY",
     "position" : "Front-end Developer",
     "dates": "2016 - Current",
-    "url": "https://github.com/kishore28m",
+    "url": "http://github.com/kishore28m",
     "description": "Create stunning User Experiences, using the skills learnt @ Udacity."
   },
   {
@@ -63,7 +63,7 @@ var work = {
     "location" : "New York, NY",
     "position" : "Front-end Developer",
     "dates": "2004 - 2016",
-    "url": "https://github.com/kishore28m",
+    "url": "http://github.com/kishore28m",
     "description": "Create stunning User Experiences, using the skills learnt @ Udacity."
   }
 ]
@@ -89,7 +89,7 @@ var projects = {
 
 var onlineclasses = {
     "title" : "Front-End Web Developer Nanodegree",
-    "titleUrl" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001",
+    "titleUrl" : "http://www.udacity.com/course/front-end-web-developer-nanodegree--nd001",
     "dates" : "2016",
     "school" : "Udacity",
     "url": "http://www.udacity.com"
