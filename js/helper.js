@@ -3,28 +3,25 @@ This file contains all of the code running in the background that makes resumeBu
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-
-var name = "Kishore Chandrasekharan";
-var role ="Front-End Developer";
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr>';
-var formattedName = HTMLheaderName.replace("%data%",name);
-var Role = HTMLheaderRole.replace("%data%",role);
+/*var name = "Kishore Chandrasekharan";
+var role ="Front-End Developer";*/
+/*var formattedName = HTMLheaderName.replace("%data%",name);
+var Role = HTMLheaderRole.replace("%data%",role); */
 
 var bio = {
-  "Name" : name,
-  "Role" : role,
-  "contacts" : {
-    "email" : "xyz@gmail.com",
-    "mobile" : "123-456-7890"
-  },
-  "location" : "New York, NY",
-  "welcomemessage" : "Welcome to my Interative resume",
-  "skills" : [
-    "HTML,", "CSS,", "JavaScript,", "SQL,", "SAS,", "Business Analysis,",
-    "Project Management."
-  ],
-  "pic" : ("images/fry.jpg")
+      "name" : "Kishore Chandrasekharan",
+      "role" : "Front-End Developer",
+      "contacts" : {
+        "email" : "xyz@gmail.com",
+        "mobile" : "123-456-7890"
+      },
+      "location" : "New York, NY",
+      "welcomeMessage" : "Welcome to my Interative resume",
+      "skills" : [
+        "HTML,", "CSS,", "JavaScript,", "SQL,", "SAS,", "Business Analysis,",
+        "Project Management."
+      ],
+      "biopic" : ["images/fry.jpg"]
 };
 
 var education = {
@@ -33,7 +30,7 @@ var education = {
       "name" : "Fairleigh Dickinson University",
       "location" : "Teaneck, New Jersey",
       "degree" : "Masters",
-      "major" : "Electrical Engineering",
+      "majors" : "Electrical Engineering",
       "dates" : "August 2001 - May 2003",
       "url" : "http://www.fdu.edu"
     },
@@ -41,7 +38,7 @@ var education = {
       "name" : "University of Madras",
       "location" : "Chennai, India",
       "degree" : "Bachelors",
-      "major" : "Electrical Engineering",
+      "majors" : "Electrical Engineering",
       "dates" : "August 1997 - May 2001",
       "url" : "http://www.unom.ac.in/"
     }
@@ -51,17 +48,17 @@ var education = {
 var work = {
   "jobs" : [
   {
-    "companyname" : "ABC industries",
+    "employer" : "ABC industries",
     "location" : "New York, NY",
-    "position" : "Front-end Developer",
+    "title" : "Front-end Developer",
     "dates": "2016 - Current",
     "url": "http://github.com/kishore28m",
     "description": "Create stunning User Experiences, using the skills learnt @ Udacity."
   },
   {
-    "companyname" : "XYZ Corp",
+    "employer" : "XYZ Corp",
     "location" : "New York, NY",
-    "position" : "Front-end Developer",
+    "title" : "Front-end Developer",
     "dates": "2004 - 2016",
     "url": "http://github.com/kishore28m",
     "description": "Create stunning User Experiences, using the skills learnt @ Udacity."
@@ -70,19 +67,19 @@ var work = {
 };
 
 var projects = {
-  "fend" : [ {
+  "projects" : [ {
     "name" : "My Portfolio",
     "dates" : "June 2016",
     "description": "This was my first project in the Front-end Nanodegree program. Bootstrap was utilized for the layout and Modals was used to describe the featured work section on the website.",
     "url" : "http://kishore28m.github.io/MyPortfolio/",
-    "pic" : ("images/Portfolio.jpg")
+    "images" : ["images/Portfolio.jpg"]
   },
   {
     "name" : "Interactive Resume",
     "dates" : "July 2016",
     "description": "This was my second project in the Front-end Nanodegree program. JavaScript was used to build this Interactive resume.",
     "url" : "#",
-    "pic" : ("images/resume.jpg")
+    "images" : ["images/resume.jpg"]
   }
   ]
 };
@@ -98,6 +95,8 @@ var onlineclasses = {
   ]
 }
 
+var HTMLheaderName = '<h1 id="name">%data%</h1>';
+var HTMLheaderRole = '<span>%data%</span><hr>';
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile:</span><span class="white-text">%data%</span></li>';
 var HTMLemail = '<li class="flex-item"><span class="orange-text">email:</span><span class="white-text">%data%</span></li>';
