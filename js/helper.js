@@ -31,7 +31,7 @@ var education = {
       "name" : "Fairleigh Dickinson University",
       "location" : "Teaneck, New Jersey",
       "degree" : "Masters",
-      "majors" : "Electrical Engineering",
+      "majors" : ["Electrical Engineering"],
       "dates" : "August 2001 - May 2003",
       "url" : "http://www.fdu.edu"
     },
@@ -39,10 +39,19 @@ var education = {
       "name" : "University of Madras",
       "location" : "Chennai, India",
       "degree" : "Bachelors",
-      "majors" : "Electrical Engineering",
+      "majors" : ["Electrical Engineering"],
       "dates" : "August 1997 - May 2001",
       "url" : "http://www.unom.ac.in/"
     }
+ ],
+ "onlineCourses" :[
+   {
+     "title" : "Front-End Web Developer Nanodegree",
+     "titleUrl" : "http://www.udacity.com/course/front-end-web-developer-nanodegree--nd001",
+     "dates" : "2016",
+     "school" : "Udacity",
+     "url": "http://www.udacity.com"
+   }
  ]
 };
 
@@ -84,17 +93,6 @@ var projects = {
   }
   ]
 };
-
-var onlineCourses = {
-  "course" : [ {
-    "title" : "Front-End Web Developer Nanodegree",
-    "titleUrl" : "http://www.udacity.com/course/front-end-web-developer-nanodegree--nd001",
-    "dates" : "2016",
-    "school" : "Udacity",
-    "url": "http://www.udacity.com"
-  }
-  ]
-}
 
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr>';
