@@ -13,15 +13,16 @@ var bio = {
       "role" : "Front-End Developer",
       "contacts" : {
         "email" : "xyz@gmail.com",
-        "mobile" : "123-456-7890"
+        "mobile" : "123-456-7890",
+        "location" : "New York, NY",
+        "github" : "http://github.com/kishore28m"
       },
-      "location" : "New York, NY",
       "welcomeMessage" : "Welcome to my Interative resume",
       "skills" : [
         "HTML,", "CSS,", "JavaScript,", "SQL,", "SAS,", "Business Analysis,",
         "Project Management."
       ],
-      "biopic" : ["images/fry.jpg"]
+      "biopic" : ("images/fry.jpg")
 };
 
 var education = {
@@ -68,14 +69,14 @@ var work = {
 
 var projects = {
   "projects" : [ {
-    "name" : "My Portfolio",
+    "title" : "My Portfolio",
     "dates" : "June 2016",
     "description": "This was my first project in the Front-end Nanodegree program. Bootstrap was utilized for the layout and Modals was used to describe the featured work section on the website.",
     "url" : "http://kishore28m.github.io/MyPortfolio/",
     "images" : ["images/Portfolio.jpg"]
   },
   {
-    "name" : "Interactive Resume",
+    "title" : "Interactive Resume",
     "dates" : "July 2016",
     "description": "This was my second project in the Front-end Nanodegree program. JavaScript was used to build this Interactive resume.",
     "url" : "#",
@@ -84,7 +85,7 @@ var projects = {
   ]
 };
 
-var onlineclasses = {
+var onlineCourses = {
   "course" : [ {
     "title" : "Front-End Web Developer Nanodegree",
     "titleUrl" : "http://www.udacity.com/course/front-end-web-developer-nanodegree--nd001",
@@ -209,8 +210,8 @@ function initializeMap() {
     var locations = [];
 
     // adds the single location property from bio to the locations array
-    //locations.push(bio.contacts.location);
-    locations.push(bio.location);
+    locations.push(bio.contacts.location);
+    //locations.push(bio.location);
 
     // iterates through school locations and appends each location to
     // the locations array. Note that forEach is used for array iteration

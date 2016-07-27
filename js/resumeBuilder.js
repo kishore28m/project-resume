@@ -1,43 +1,49 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
-var formattedName = HTMLheaderName.replace("%data%",bio.name);
-var Role = HTMLheaderRole.replace("%data%",bio.role);
-$("#header").prepend([Role]);
-$("#header").prepend([formattedName]);
 
-if(bio.pic != "") {
-  var formattedpic = HTMLbioPic.replace("%data%",bio.biopic);
-  $("#header").append(formattedpic);
-}
+bio.display = function() {
+  var Role = HTMLheaderRole.replace("%data%",bio.role);
+  $("#header").prepend([Role]);
 
-if(bio.contacts.email != "")
-{
-  var formattedemail = HTMLemail.replace("%data%",bio.contacts.email);
-  $("#topContacts").prepend(formattedemail);
-  $("#footerContacts").append(formattedemail);
-}
+  var formattedName = HTMLheaderName.replace("%data%",bio.name);
+  $("#header").prepend([formattedName]);
 
-if(bio.contacts.mobile !="")
-{
-  var formattedmobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
-  $("#topContacts").prepend(formattedmobile);
-  $("#footerContacts").append(formattedmobile);
-}
+  if(bio.pic != "") {
+    var formattedpic = HTMLbioPic.replace("%data%",bio.biopic);
+    $("#header").append(formattedpic);
+  }
 
-if (bio.location != "") {
-  var formattedlocation = HTMLlocation.replace("%data%",bio.location);
-  $("#topContacts").prepend(formattedlocation);
-}
+  if(bio.contacts.email != "")
+  {
+    var formattedemail = HTMLemail.replace("%data%",bio.contacts.email);
+    $("#topContacts").prepend(formattedemail);
+    $("#footerContacts").append(formattedemail);
+  }
 
-if(bio.skills.length > 0)
-{
-  $("#header").append(HTMLskillsStart);
-  for(i=0; i < bio.skills.length; i++) {
-    var skills = HTMLskills.replace("%data%",bio.skills[i]);
-    $("#skills").append(skills);
+  if(bio.contacts.mobile !="")
+  {
+    var formattedmobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
+    $("#topContacts").prepend(formattedmobile);
+    $("#footerContacts").append(formattedmobile);
+  }
+
+  if (bio.contacts.location != "") {
+    var formattedlocation = HTMLlocation.replace("%data%",bio.contacts.location);
+    $("#topContacts").prepend(formattedlocation);
+  }
+
+  if(bio.skills.length > 0)
+  {
+    $("#header").append(HTMLskillsStart);
+    for(i=0; i < bio.skills.length; i++) {
+      var skills = HTMLskills.replace("%data%",bio.skills[i]);
+      $("#skills").append(skills);
+    }
   }
 }
+
+bio.display();
 
 // note: for loop can work standalone and doesn't have to be within a function.
 
@@ -79,19 +85,19 @@ education.display = function() {
 
 education.display();
 
-onlineclasses.display = function() {
+onlineCourses.display = function() {
   $(".education-entry:last").append(HTMLonlineClasses);
-  for(i = 0; i < onlineclasses.course.length; i++) {
-    var formattedTitle = HTMLonlineTitle.replace("%data%",onlineclasses.course[i].title).replace("#",onlineclasses.course[i].titleUrl);
-    var formattedschool = HTMLonlineSchool.replace("%data%",onlineclasses.course[i].school);
-    var formatteddates = HTMLonlineDates.replace("%data%",onlineclasses.course[i].dates);
-    var formattedurl = HTMLonlineURL.replace("%data%",onlineclasses.course[i].url).replace("#",onlineclasses.course[i].url);
+  for(i = 0; i < onlineCourses.course.length; i++) {
+    var formattedTitle = HTMLonlineTitle.replace("%data%",onlineCourses.course[i].title).replace("#",onlineCourses.course[i].titleUrl);
+    var formattedschool = HTMLonlineSchool.replace("%data%",onlineCourses.course[i].school);
+    var formatteddates = HTMLonlineDates.replace("%data%",onlineCourses.course[i].dates);
+    var formattedurl = HTMLonlineURL.replace("%data%",onlineCourses.course[i].url).replace("#",onlineCourses.course[i].url);
     var formattedonlinedata = formattedTitle + formattedschool + formatteddates + formattedurl;
     $(".education-entry:last").append(formattedonlinedata);
   }
 }
 
-onlineclasses.display();
+onlineCourses.display();
 
 // Education - Ends here
 
@@ -100,7 +106,7 @@ onlineclasses.display();
 projects.display = function() {
   for(i = 0; i < projects.projects.length; i++) {
     $("#projects").append(HTMLprojectStart);
-    var formattedprojectTitle = HTMLprojectTitle.replace("%data%",projects.projects[i].name).replace("#",projects.projects[i].url);
+    var formattedprojectTitle = HTMLprojectTitle.replace("%data%",projects.projects[i].title).replace("#",projects.projects[i].url);
     $(".project-entry:last").append(formattedprojectTitle);
     var formattedprojectDates = HTMLprojectDates.replace("%data%",projects.projects[i].dates);
     $(".project-entry:last").append(formattedprojectDates);
