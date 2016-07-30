@@ -134,7 +134,7 @@ function locationizer(work_obj) {
 //console.log(locationizer(work));
 
 function inName(){
-  var name = window.name;
+  var name = window.bio.name;
   name = name.trim().split(" ");
 //  console.log(name);
  name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
